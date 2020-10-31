@@ -12,3 +12,43 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.green {
+  background: #0d6217;
+  color: #aaaaaa;
+}
+
+.blue {
+  background: #0e1a40;
+  color: #cc8e34;
+}
+
+.yellow {
+  background: #ffed86;
+  color: #000;
+}
+
+.scarlet {
+  background: #7f0909;
+  color: #ffc500;
+}
+
+.slytherin-badge-style {
+  background: #1a472a;
+  color: #aaa;
+}
+
+.ravenclaw-badge-style {
+  background: #222f5b;
+  color: #cc8e34;
+}
+
+.hufflepuff-badge-style {
+  background: #ecb939;
+  color: #000;
+}
+
+.gryffindor-badge-style {
+  background: #ae0001;
+  color: #ffc500;
+}

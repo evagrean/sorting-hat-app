@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Sorting Hat App
+
+Click the button and you'll be assigned to a random Hogwards House. You get information about your house's mascot, colors and values.
+
+----- WIP ----
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

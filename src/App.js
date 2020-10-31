@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import Header from "./components/Header";
-import SortingButton from "./components/SortingButton";
-import HouseView from "./components/HouseView";
-import GoBackButton from "./components/GoBackButton";
+import WelcomeCard from "./components/WelcomeCard";
+import HouseCard from "./components/HouseCard";
 import axios from "axios";
 
-import "./App.js";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -39,19 +37,7 @@ class App extends Component {
   render() {
     let { randomHouse, details, showSortingButton } = this.state;
     console.log(randomHouse, details);
-    return (
-      <div className="App">
-        <Header />
-        {showSortingButton && <SortingButton onClick={this.getHouseAndDetails} />}
-
-        {randomHouse && details && (
-          <div>
-            <HouseView houseName={randomHouse} details={details} />
-            <GoBackButton onClick={this.goBackToSortingCeremony} />
-          </div>
-        )}
-      </div>
-    );
+    return <div className="App">{randomHouse === null ? <WelcomeCard showSortingButton={showSortingButton} getHouseAndDetails={this.getHouseAndDetails} /> : <HouseCard houseName={randomHouse} details={details} goBackToSortingCeremony={this.goBackToSortingCeremony} />}</div>;
   }
 }
 
