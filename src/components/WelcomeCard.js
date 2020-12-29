@@ -5,7 +5,7 @@ import harryRonLego from "../assets/harryRonLego.jpg";
 
 export default class WelcomeCard extends Component {
   render() {
-    const { getHouseAndDetails } = this.props;
+    const { getHouseAndHousemates } = this.props;
     return (
       <div>
         <Card style={{ width: "40em", margin: "20px auto" }}>
@@ -13,7 +13,7 @@ export default class WelcomeCard extends Component {
           <Card.Body>
             <Card.Title>Welcome to the Sorting Ceremony at Hogwarts!</Card.Title>
             <Card.Text>Put on the sorting hat and see which Hogwarts House it assigns you to.</Card.Text>
-            <SortingButton onClick={getHouseAndDetails} />
+            <SortingButton onClick={getHouseAndHousemates} />
           </Card.Body>
         </Card>
       </div>

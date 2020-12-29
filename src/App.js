@@ -8,19 +8,19 @@ import "./App.css";
 class App extends Component {
   state = {
     randomHouse: null,
-    details: {},
+    housemates: [],
     showSortingButton: true,
   };
 
-  getHouseAndDetails = () => {
+  getHouseAndHousemates = async () => {
     try {
-      axios.get("https://7aqee4sb74.execute-api.eu-central-1.amazonaws.com/dev/sorting").then((res) =>
-        this.setState({
-          randomHouse: res.data.randomHouse,
-          details: res.data.details,
-          showSortingButton: false,
-        })
-      );
+      const res = await axios.get(" https://lp4o7ya0sk.execute-api.eu-central-1.amazonaws.com/dev/house");
+
+      this.setState({
+        randomHouse: res.data.randomHouse,
+        housemates: res.data.housemates,
+        showSortingButton: false,
+      });
     } catch (error) {
       console.error(error.message);
     }
@@ -29,15 +29,15 @@ class App extends Component {
   goBackToSortingCeremony = (e) => {
     this.setState({
       randomHouse: null,
-      details: {},
+      housemates: [],
       showSortingButton: true,
     });
   };
 
   render() {
-    let { randomHouse, details, showSortingButton } = this.state;
-    console.log(randomHouse, details);
-    return <div className="App">{randomHouse === null ? <WelcomeCard showSortingButton={showSortingButton} getHouseAndDetails={this.getHouseAndDetails} /> : <HouseCard houseName={randomHouse} details={details} goBackToSortingCeremony={this.goBackToSortingCeremony} />}</div>;
+    let { randomHouse, housemates, showSortingButton } = this.state;
+    console.log(randomHouse, housemates);
+    return <div className="App">{randomHouse === null ? <WelcomeCard showSortingButton={showSortingButton} getHouseAndHousemates={this.getHouseAndHousemates} /> : <HouseCard houseName={randomHouse} housemates={housemates} goBackToSortingCeremony={this.goBackToSortingCeremony} />}</div>;
   }
 }
 
