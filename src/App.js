@@ -14,7 +14,7 @@ class App extends Component {
 
   getHouseAndDetails = () => {
     try {
-      axios.get("https://7aqee4sb74.execute-api.eu-central-1.amazonaws.com/dev/sorting", { timeout: 10000 }).then((res) =>
+      axios.get("https://7aqee4sb74.execute-api.eu-central-1.amazonaws.com/dev/sorting").then((res) =>
         this.setState({
           randomHouse: res.data.randomHouse,
           details: res.data.details,

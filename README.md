@@ -1,6 +1,6 @@
 # Sorting Hat App
 
-Click the button and you'll be assigned to a random Hogwards House. You get information about your house's mascot, colors and values.
+Click the button and you'll be assigned to a random Hogwards House. You'll also meet a few of your housmates.
 
 ----- WIP ----
 
