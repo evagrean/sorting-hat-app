@@ -1,16 +1,13 @@
-import React, { Component } from "react";
-import { Button } from "react-bootstrap";
+import React from "react";
 
-class SortingButton extends Component {
-  render() {
-    return (
-      <div>
-        <Button variant="outline-dark" onClick={this.props.onClick}>
-          Put on the Hat
-        </Button>
-      </div>
-    );
-  }
-}
+const SortingButton = ({ fetchHouseData }) => {
+  return (
+    <div>
+      <button className="sorting-button" onClick={fetchHouseData}>
+        Put on the Hat
+      </button>
+    </div>
+  );
+};
 
 export default SortingButton;
