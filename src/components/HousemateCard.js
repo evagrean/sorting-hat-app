@@ -1,22 +1,13 @@
-import React, { Component } from "react";
-import { Card, Button } from "react-bootstrap";
+import React from "react";
 
-export default class HousemateCard extends Component {
-  render() {
-    const { name, image } = this.props;
+const HousemateCard = ({ housemateDetails }) => {
+  return (
+    <div className="housemate-card">
+      <img src={housemateDetails.image} alt="housemate portrait"></img>
+      <p>{housemateDetails.name}</p>
+      <p>wand: {housemateDetails.wand.wood}</p>
+    </div>
+  );
+};
 
-    return (
-      <div>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={image} />
-          <Card.Body>
-            <Card.Title>{name}</Card.Title>
-            <Card.Text>
-              <Button variant="primary">Get to know me</Button>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
-    );
-  }
-}
+export default HousemateCard;

@@ -4,14 +4,23 @@ import React from "react";
 // import WelcomeCard from "./WelcomeCard";
 // import HousemateList from "./HousemateList";
 
-const HouseCard = ({ house, housemates }) => {
+const HouseCard = ({ house, housemates, isLoading }) => {
   return (
-    <div>
-      <h1>You are a {house}</h1>
-      <p>Your housemates: </p>
-      {housemates.map((housemate) => (
-        <h2 key={housemates.indexOf(housemate)}>{housemate.name}</h2>
-      ))}
+    // <div>{isLoading ? <p>loading...</p> : <p>Fetched!!</p>}</div>
+
+    <div className="house-card">
+      {isLoading ? (
+        <p>loading...</p>
+      ) : (
+        <div>
+          {" "}
+          <h1>You are a {house}</h1>
+          <p>Your housemates: </p>
+          {housemates.map((housemate) => (
+            <h2 key={housemates.indexOf(housemate)}>{housemate.name}</h2>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
