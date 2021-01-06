@@ -27,6 +27,22 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      slytherin: {
+        green: "#2a623d",
+        silver: "#aaaaaa",
+      },
+      ravenclaw: {
+        blue: "#222f5b",
+        bronze: "	#946b2d",
+      },
+      gryffindor: {
+        red: "#740001",
+        gold: "#eeba30",
+      },
+      hufflepuff: {
+        yellow: "#f0c75e",
+        black: "#000000",
+      },
     },
     spacing: {
       px: "1px",

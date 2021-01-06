@@ -5,13 +5,14 @@ const HousematesList = ({ housemates }) => {
   console.log(housemates);
 
   return (
-    <div class="container my-12 mx-auto px-4 md:px-12">
-      <div class="flex flex-wrap -mx-1 lg:-mx-4">
-        {housemates.map((housemate) => (
-          <HousemateCard housemateDetails={housemate} />
-        ))}
+    <div className="housemates-list">
+      <div class="container my-12 px-4 md:px-12">
+        <div class="flex -mx-1 lg:-mx-4">
+          {housemates.map((housemate) => (
+            <HousemateCard housemateDetails={housemate} />
+          ))}
+        </div>
       </div>
-      {/* Closing outer div */}
     </div>
   );
 };

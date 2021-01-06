@@ -1,6 +1,8 @@
 import React, { useState, useCallback } from "react";
 import HouseView from "./HouseView";
 import SortingButton from "./SortingButton";
+import hatImg from "../images/sorting-hat-owl.png";
+
 import axios from "axios";
 
 const CeremonyView = () => {
@@ -45,9 +47,15 @@ const CeremonyView = () => {
   };
 
   return (
-    <div className="ceremony-view">
-      <h1>WELCOME TO THE SORTING CEREMONY</h1>
-      {isLoading ? <p>sorting...</p> : null}
+    // eslint-disable-next-line react/style-prop-object
+    <div className="ceremony-view flex flex-col items-center font-serif">
+      <p className="text-6xl text-white p-10 text-center uppercase  ">welcome to hogwarts</p>
+      {isLoading ? (
+        <span className="text-white text-4xl">
+          <img src={hatImg} alt="sorting hat" className="h-30 w-40" />
+          sorting...
+        </span>
+      ) : null}
       {showSortingButton ? <SortingButton fetchHouseData={fetchHouseData} /> : null}
       {houseData ? <HouseView house={houseData} housemates={housematesData} showSortingButton={showSortingButton} goBackToCeremony={goBackToCeremony} /> : null}
     </div>

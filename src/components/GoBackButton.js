@@ -1,14 +1,13 @@
-import React, { Component } from "react";
-import { Button } from "react-bootstrap";
+import React from "react";
 
-export default class GoBackButton extends Component {
-  render() {
-    return (
-      <div>
-        <Button variant="outline-dark" onClick={this.props.onClick}>
-          Back to Ceremony
-        </Button>
-      </div>
-    );
-  }
-}
+const GoBackButton = ({ goBackToCeremony }) => {
+  return (
+    <div className="flex flex-col items-center">
+      <button className="uppercase px-20 py-9 m-20 bg-yellow-600 text-gray-900 max-w-max shadow-sm hover:shadow-md text-5xl" onClick={goBackToCeremony}>
+        back to ceremony
+      </button>
+    </div>
+  );
+};
+
+export default GoBackButton;
