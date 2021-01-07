@@ -22,9 +22,9 @@ const Footer = () => {
         </p>
         <p className="px-5"> | </p>
         <p>
-          <span className="mr-2">&#169;</span>App designed and developed by{" "}
+          <span className="mr-2">&#169;</span>App designed and developed by
           <a href="https://github.com/evagrean" target="_blank" rel="noopener noreferrer">
-            Eva Greiner-Anzenbacher
+            <span> Eva Greiner-Anzenbacher</span>
           </a>
         </p>
       </div>

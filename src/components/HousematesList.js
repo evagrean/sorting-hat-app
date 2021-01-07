@@ -1,17 +1,15 @@
 import React from "react";
 import HousemateCard from "./HousemateCard";
 
-const HousematesList = ({ housemates }) => {
+const HousematesList = ({ housemates, bgColor, textColor }) => {
   console.log(housemates);
 
   return (
     <div className="housemates-list">
-      <div class="container my-12 px-4 md:px-12">
-        <div class="flex place-items-start-mx-1 lg:-mx-4">
-          {housemates.map((housemate) => (
-            <HousemateCard housemateDetails={housemate} />
-          ))}
-        </div>
+      <div class="flex xs:flex-col xs:flex-wrap">
+        {housemates.map((housemate) => (
+          <HousemateCard housemateDetails={housemate} bgColor={bgColor} textColor={textColor} />
+        ))}
       </div>
     </div>
   );

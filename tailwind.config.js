@@ -33,7 +33,7 @@ module.exports = {
       },
       ravenclaw: {
         blue: "#222f5b",
-        bronze: "	#946b2d",
+        bronze: "#946b2d",
       },
       gryffindor: {
         red: "#740001",
