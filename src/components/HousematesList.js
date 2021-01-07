@@ -7,7 +7,7 @@ const HousematesList = ({ housemates }) => {
   return (
     <div className="housemates-list">
       <div class="container my-12 px-4 md:px-12">
-        <div class="flex -mx-1 lg:-mx-4">
+        <div class="flex place-items-start-mx-1 lg:-mx-4">
           {housemates.map((housemate) => (
             <HousemateCard housemateDetails={housemate} />
           ))}

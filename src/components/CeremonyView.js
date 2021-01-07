@@ -49,7 +49,7 @@ const CeremonyView = () => {
   return (
     // eslint-disable-next-line react/style-prop-object
     <div className="ceremony-view flex flex-col items-center font-serif">
-      <p className="text-6xl text-white p-10 text-center uppercase  ">welcome to hogwarts</p>
+      <p className="text-6xl text-white p-16 text-center uppercase  ">welcome to hogwarts</p>
       {isLoading ? (
         <span className="text-white text-4xl">
           <img src={hatImg} alt="sorting hat" className="h-30 w-40" />

@@ -26,11 +26,11 @@ const HouseView = ({ house, housemates, goBackToCeremony }) => {
 
   return (
     <div className="house-view">
-      <div className={`mt-10 house-view flex flex-col items-center ${bgColor}`}>
+      <div className={`mt-10 flex flex-col place-items-start outline-white ${bgColor}`}>
         <div>
-          <p className={`text-3xl p-5 text-center ${textColor}`}>Congrats, you are a {house}</p>
+          <p className={`text-3xl pt-5 px-4 ${textColor}`}>Congrats, you are a {house}</p>
         </div>
-        <p className={`text-3xl ${textColor}`}>Meet some of your housemates:</p>
+        <p className={`text-3xl pt-5 px-4 ${textColor}`}>Meet some of your housemates:</p>
         <HousematesList housemates={housemates} />
       </div>
 
