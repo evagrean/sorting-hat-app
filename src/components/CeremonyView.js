@@ -47,11 +47,12 @@ const CeremonyView = () => {
   };
 
   return (
-    // eslint-disable-next-line react/style-prop-object
-    <div className="ceremony-view flex flex-col items-center font-serif">
-      {isLoading ? <HatImage /> : null}
-      {showSortingButton ? <SortingButton fetchHouseData={fetchHouseData} /> : null}
-      {houseData ? <HouseView house={houseData} housemates={housematesData} showSortingButton={showSortingButton} goBackToCeremony={goBackToCeremony} /> : null}
+    <div className="ceremony-view">
+      <div className="outline-white flex flex-col items-center py-16">
+        {isLoading ? <HatImage /> : null}
+        {showSortingButton ? <SortingButton fetchHouseData={fetchHouseData} /> : null}
+        {houseData ? <HouseView house={houseData} housemates={housematesData} showSortingButton={showSortingButton} goBackToCeremony={goBackToCeremony} /> : null}
+      </div>
     </div>
   );
 };

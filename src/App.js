@@ -5,12 +5,14 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="app flex flex-col justify-between w-full h-screen bg-center bg-no-repeat bg-cover bg-great-hall">
-      <Header />
-      <CeremonyView />
-      <Footer />
-
-      {/* {houseData ? <HouseCard house={houseData} housemates={housematesData} /> : <CeremonyView />} */}
+    <div className="app">
+      <div className="flex flex-col justify-between w-full h-screen bg-center bg-no-repeat bg-cover bg-great-hall font-serif">
+        <Header />
+        <div className="flex-grow">
+          <CeremonyView />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 };
