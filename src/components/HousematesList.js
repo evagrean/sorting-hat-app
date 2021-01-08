@@ -6,7 +6,7 @@ const HousematesList = ({ housemates, bgColor, textColor }) => {
 
   return (
     <div className="housemates-list">
-      <div class="flex xs:flex-col xs:flex-wrap">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-5 ">
         {housemates.map((housemate) => (
           <HousemateCard housemateDetails={housemate} bgColor={bgColor} textColor={textColor} />
         ))}

@@ -48,7 +48,7 @@ const CeremonyView = () => {
 
   return (
     <div className="ceremony-view">
-      <div className="outline-white flex flex-col items-center py-16">
+      <div className="outline-white flex flex-col items-center">
         {isLoading ? <HatImage /> : null}
         {showSortingButton ? <SortingButton fetchHouseData={fetchHouseData} /> : null}
         {houseData ? <HouseView house={houseData} housemates={housematesData} showSortingButton={showSortingButton} goBackToCeremony={goBackToCeremony} /> : null}
