@@ -6,7 +6,7 @@ const HousematesList = ({ housemates, bgColor, textColor }) => {
 
   return (
     <div className="housemates-list">
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-5 ">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 ">
         {housemates.map((housemate) => (
           <HousemateCard housemateDetails={housemate} bgColor={bgColor} textColor={textColor} />
         ))}
