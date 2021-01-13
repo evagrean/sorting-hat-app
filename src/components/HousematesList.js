@@ -5,22 +5,12 @@ const HousematesList = ({ housemates, bgColor, textColor }) => {
   console.log(housemates);
 
   return (
-    <div className="housemates-list">
+    <div className="outline-white housemates-list m-10">
       {housemates.map((housemate) => (
         <HousemateCard housemateDetails={housemate} bgColor={bgColor} textColor={textColor} />
       ))}
     </div>
   );
 };
-
-// return (
-//   <div className="container my-12 mx-auto px-4 md:px-12">
-
-//         {housemates.map((housemate) => (
-//           <HousemateCard key={housemates.indexOf(housemate)} housemateDetails={housemate} />
-//         ))}
-
-//   </div>
-// );
 
 export default HousematesList;

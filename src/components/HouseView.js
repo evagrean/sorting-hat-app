@@ -25,15 +25,15 @@ const HouseView = ({ house, housemates, goBackToCeremony }) => {
   let { textColor, bgColor } = getHouseColors();
 
   return (
-    <div className={`outline-white house-view p-5 bg-center bg-no-repeat bg-cover bg-opacity-80  ${bgColor}`}>
-      <div className="">
-        <p className={`outline-white text-8xl font-semibold tracking-wide ${textColor}`}>{house}!</p>
+    <div className={`outline-white house-view max-w-300 bg-center bg-no-repeat bg-cover bg-opacity-80 ${bgColor}`}>
+      <div className="outline-white">
+        <p className={`outline-white m-5 text-center text-6xl font-semibold ${textColor}`}>{house}!</p>
 
-        <p className={`outline-white text-3xl font-semibold tracking-wide ${textColor}`}>Meet some of your housemates:</p>
+        <p className={`outline-white m-5 text-center text-2xl font-semibold tracking-wide ${textColor}`}>Meet some of your housemates:</p>
       </div>
       <HousematesList housemates={housemates} bgColor={bgColor} textColor={textColor} />
 
-      <div className="outline-white flex justify-end">
+      <div className="outline-white flex justify-center my-10">
         <GoBackButton goBackToCeremony={goBackToCeremony} textColor={textColor} />
       </div>
     </div>
