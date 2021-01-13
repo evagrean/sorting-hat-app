@@ -3,8 +3,8 @@ import React from "react";
 const HousemateCard = ({ housemateDetails, bgColor, textColor }) => {
   return (
     <div className="housemate-card">
-      <div className={`outline-white rounded overflow-hidden shadow  ${bgColor}`}>
-        <img src={housemateDetails.image} alt="housemate" className="w-full h-80 object-cover" />
+      <div className={`outline-white rounded overflow-hidden shadow  ${bgColor} h-full`}>
+        <img src={housemateDetails.image} alt="housemate" className="w-full h-full object-cover" />
         <div className="m-4">
           <h1 className={`font-bold ${textColor}`}>{housemateDetails.name}</h1>
         </div>

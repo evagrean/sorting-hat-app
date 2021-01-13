@@ -47,12 +47,10 @@ const CeremonyView = () => {
   };
 
   return (
-    <div className="ceremony-view">
-      <div className="outline-white flex flex-col items-center m-10">
-        {isLoading ? <HatImage /> : null}
-        {showSortingButton ? <SortingButton fetchHouseData={fetchHouseData} /> : null}
-        {houseData ? <HouseView house={houseData} housemates={housematesData} showSortingButton={showSortingButton} goBackToCeremony={goBackToCeremony} /> : null}
-      </div>
+    <div className="outline-white ceremony-view flex flex-col items-center min-h-screen">
+      {isLoading ? <HatImage /> : null}
+      {showSortingButton ? <SortingButton fetchHouseData={fetchHouseData} /> : null}
+      {houseData ? <HouseView house={houseData} housemates={housematesData} showSortingButton={showSortingButton} goBackToCeremony={goBackToCeremony} /> : null}
     </div>
   );
 };
