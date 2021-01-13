@@ -1,12 +1,11 @@
 import React from "react";
 
-const GoBackButton = ({ goBackToCeremony, textColor }) => {
+const GoBackButton = ({ goBackToCeremony, textColor, bgColor }) => {
   return (
-    <div className="">
-      <button className={`uppercase  py-5 rounded-md ${textColor} font-normal max-w-max shadow-sm hover:underline text-3xl`} onClick={goBackToCeremony}>
-        <span>back to ceremony</span>
-      </button>
-    </div>
+    <button className={`outline-white back-btn flex items-baseline justify-center p-3 uppercase text-2xl font-bold hover:bg-opacity-60 rounded-md shadow-sm ${textColor} ${bgColor}`} onClick={goBackToCeremony}>
+      <span className="outline-white text-4xl font-bold">&#8592;</span>
+      <span className="outline-white">back to ceremony</span>
+    </button>
   );
 };
 
