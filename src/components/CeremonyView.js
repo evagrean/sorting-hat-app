@@ -28,7 +28,7 @@ const CeremonyView = () => {
         if (mounted) {
           setIsLoading(false);
         }
-      }, 2000);
+      }, 4000);
     } catch (err) {
       console.error(err);
       setIsLoading(false);
