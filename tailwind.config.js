@@ -28,12 +28,12 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       slytherin: {
-        green: "#2a623d",
+        green: "#1A472A",
         silver: "#aaaaaa",
       },
       ravenclaw: {
-        blue: "#222f5b",
-        bronze: "#946b2d",
+        blue: "#0e1a40",
+        bronze: "#A98856",
       },
       gryffindor: {
         red: "#740001",
@@ -102,7 +102,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: (theme) => ({
-        "great-hall": "url('/src/images/great-hall-v2.jpg')",
+        "great-hall": "url('/src/images/great-hall-darker.jpg')",
       }),
     },
     backgroundOpacity: (theme) => theme("opacity"),
@@ -187,6 +187,8 @@ module.exports = {
       sans: ["ui-sans-serif", "system-ui", "-apple-system", "BlinkMacSystemFont", '"Segoe UI"', "Roboto", '"Helvetica Neue"', "Arial", '"Noto Sans"', "sans-serif", '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
       serif: ["ui-serif", "Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
       mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", '"Liberation Mono"', '"Courier New"', "monospace"],
+      heading: ["Nanum Myeongjo", "serif"],
+      body: ["Montserrat", "sans-serif"],
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],

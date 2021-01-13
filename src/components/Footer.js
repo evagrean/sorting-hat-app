@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="outline-white footer flex flex-col items-center px-5 pt-5 pb-10  text-white text-lg bg-yellow-900 bg-opacity-80">
+    <div className="outline-white footer flex flex-col items-center px-5 pt-5 pb-10  text-white text-lg bg-yellow-900 bg-opacity-60">
       <div className="outline-white copyright text-center my-3">
         <p className="mr-2">&#169; Copyright 2021</p>
         <p>

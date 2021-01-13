@@ -25,7 +25,7 @@ const HouseView = ({ house, housemates, goBackToCeremony }) => {
   let { textColor, bgColor } = getHouseColors();
 
   return (
-    <div className={`outline-white house-view max-w-300 bg-center bg-no-repeat bg-cover bg-opacity-80 ${bgColor}`}>
+    <div className={`outline-white house-view sm:mx-5 sm:my-5 bg-center bg-no-repeat bg-cover bg-opacity-80 ${bgColor}`}>
       <div className="outline-white">
         <p className={`outline-white mt-10 mx-5 text-center text-5xl font-semibold ${textColor}`}>{house}!</p>
 
