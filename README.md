@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project was built to practice React Hooks and try out Tailwind CSS. It acts as frontend for a [Serverless Sorting Service](https://github.com/evagrean/random-sorting-service) I built before.
+This project I built to practice React Hooks and try out Tailwind CSS. It acts as frontend for a [Serverless Sorting Service](https://github.com/evagrean/random-sorting-service) I built before.
 
 The app mimics the sorting ceremony that takes place for new students at Hogwarts, the School of Whitchcraft and Wizardy. Users can click a button to initiate the sorting process and will be randomly assigned to one of the four Hogwarts houses. They are directed to their corresponding house view, that represents the colors of the certain house and presents a few of their new housemates. The house view also includes a button to restart the sorting ceremony.
 
