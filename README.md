@@ -1,74 +1,72 @@
-# Sorting Hat App
+# Hogwarts Sorting Hat App - React Application with Tailwind CSS
 
-Click the button and you'll be assigned to a random Hogwards House. You'll also meet some of your housmates.
+## Overview
 
------ WIP ----
+This project was built to practice React Hooks and try out Tailwind CSS. It acts as frontend for a [Serverless Sorting Service](https://github.com/evagrean/sorting-service) I built before.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The app mimics the sorting ceremony that takes place for new students at Hogwarts, the School of Whitchcraft and Wizardy. Users can click a button to initiate the sorting process and will be randomly assigned to one of the four Hogwarts houses. They are directed to their corresponding house view, that represents the colors of the certain house and presents a few of their new housemates. The house view also includes a button to restart the sorting ceremony.
 
-## Available Scripts
+## Deployment
 
-In the project directory, you can run:
+App life at: (https://sorting-hat-app.netlify.app/).
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- JavaScript
+- React ([Create React App](https://github.com/facebook/create-react-app))
+- [Tailwind CSS](https://tailwindcss.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Application
 
-### `npm test`
+### Dependendies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `react`
+- `react-dom`
+- `react-scripts`
+- `axios`
+- `tailwindcss`
+- `autoprefixer`
+- `postcss`
+- `craco`
 
-### `npm run build`
+### Initalizing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Fork and clone the project and cd into `sorting-hat-app` directory.
+- Run `npm install` to fetch dependencies.
+- In `package.json` change `start` and `build` scripts to `craco start` and `craco build`.
+- Run `npm start` to run app in development mode.
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Run `npm build` to build the app for production to the `build` folder (it correctly bundles React in production mode and optimizes the build for the best performance).
+- See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+At the moment of writing this documentation, the page rendering depends on state changes. React Router may be added in a further iteration.
 
-### `npm run eject`
+#### `<App />`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Acts as a container for the overall structure of the app (`<Header />`, `<CeremonyView />`, `<Footer />`) as well as sets a customized background image for the entire app.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### `<Header />`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Holds a welcome message and invites user to start the sorting ceremony.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### `<Footer />`
 
-## Learn More
+Contains information about copyright, picture credits and intellectual properties of mentioned content.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### `<CeremonyView />`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Data from 3rd party API is fetched here and state and data is stored. It is also the container for secondary components (`<SortingButton />`, `<HatImg />`, `<HouseView />`). Once users click the `PUT ON THE SORTING HAT` button, the app starts fetching house data from API, and a bouncing Sorting Hat appears while data is loading (loading time extended with `setTimeout()` of 4ms). When finished, `<HouseView />` component is rendered.
 
-### Code Splitting
+#### `<HouseView />`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Receives data about the assigned house and housemates from `<CeremonyView />`'s state and displays a list of housemates (`<HousematesList />`). It also renders a `<GoBackButton />` that calls the `goBackToCeremony` function when clicked and `<SortingButton />` renders again instead of `<HouseView />`. In this component, a `getHouseColors` handler function sets colors for text and background according to the house selected. These colors are passed through props to every child component (`<HousematesList />`, `<HousemateCard />`, `<GoBackButton />`).
 
-### Analyzing the Bundle Size
+#### `<HousematesList />`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This component maps a `<HousemateCard />` for every entry of the `housemates-array` received through props.
 
-### Making a Progressive Web App
+#### `<HousemateCard />`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Displays an image and the name of each housemate as received through props.

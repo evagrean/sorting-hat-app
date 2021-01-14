@@ -4,11 +4,10 @@ const Footer = () => {
   return (
     <div className="footer flex flex-col items-center px-5 pt-5 pb-10  text-white text-lg bg-yellow-900 bg-opacity-70 border-t-4 border-pink-900">
       <div className="copyright text-center my-3">
-        <p className="mr-2">&#169; Copyright 2021</p>
-        <p>
-          Designed and developed by
+        <p className="mr-2">
+          &#169; 2021 Designed and developed by
           <a href="https://github.com/evagrean" target="_blank" rel="noopener noreferrer">
-            Eva Greiner-Anzenbacher
+            <span> Eva Greiner-Anzenbacher</span>
           </a>
         </p>
       </div>
