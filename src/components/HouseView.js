@@ -1,6 +1,7 @@
 import React from "react";
 import HousematesList from "./HousematesList";
 import GoBackButton from "./GoBackButton";
+import { Link } from "react-router-dom";
 
 const HouseView = ({ house, housemates, goBackToCeremony }) => {
   const getHouseColors = () => {
@@ -33,7 +34,9 @@ const HouseView = ({ house, housemates, goBackToCeremony }) => {
           <p className={`m-5 lg:m-0 lg:mt-3 text-center text-2xl font-semibold tracking-wide ${textColor}`}>Meet some of your housemates:</p>
         </div>
         <div className="hidden lg:flex lg:h-full lg:justify-end lg:mt-10 mr-10">
-          <GoBackButton goBackToCeremony={goBackToCeremony} textColor={textColor} bgColor={bgColor} />
+          <Link to="/">
+            <GoBackButton goBackToCeremony={goBackToCeremony} textColor={textColor} bgColor={bgColor} />
+          </Link>
         </div>
       </div>
       <HousematesList housemates={housemates} bgColor={bgColor} textColor={textColor} />
