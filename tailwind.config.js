@@ -102,7 +102,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: (theme) => ({
-        "great-hall": "url('/src/images/great-hall.jpg')",
+        "great-hall": "url('/src/images/great-hall.png')",
       }),
     },
     backgroundOpacity: (theme) => theme("opacity"),
