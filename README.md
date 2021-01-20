@@ -23,6 +23,7 @@ App life at: (https://sorting-hat-app.netlify.app/).
 - `react`
 - `react-dom`
 - `react-scripts`
+- `react-router-dom`
 - `axios`
 - `tailwindcss`
 - `autoprefixer`
@@ -40,8 +41,6 @@ App life at: (https://sorting-hat-app.netlify.app/).
 - See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### Components
-
-At the moment of writing this documentation, the page rendering depends on state changes. React Router may be added in a further iteration.
 
 #### `<App />`
 
