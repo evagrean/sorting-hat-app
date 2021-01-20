@@ -44,7 +44,7 @@ App life at: (https://sorting-hat-app.netlify.app/).
 
 #### `<App />`
 
-Acts as a container for the overall structure of the app (`<Header />`, `<CeremonyView />`, `<Footer />`) as well as sets a customized background image for the entire app.
+Acts as a container for the overall structure of the app (`<Header />`, `<CeremonyView />`, `<HouseView />`, `<Footer />`) as well as sets a customized background image for the entire app. Data from 3rd party API is fetched here and state and data is stored.
 
 #### `<Header />`
 
@@ -56,11 +56,11 @@ Contains information about copyright, picture credits and intellectual propertie
 
 #### `<CeremonyView />`
 
-Data from 3rd party API is fetched here and state and data is stored. It is also the container for secondary components (`<SortingButton />`, `<HatImg />`, `<HouseView />`). Once users click the `PUT ON THE SORTING HAT` button, the app starts fetching house data from API, and a bouncing Sorting Hat appears while data is loading (loading time extended with `setTimeout()` of 4ms). When finished, `<HouseView />` component is rendered.
+It is also the container for secondary components (`<SortingButton />`, `<HatImg />`. Once users click the `PUT ON THE SORTING HAT` button, the app starts fetching house data from API, and a bouncing Sorting Hat appears while data is loading (loading time extended with `setTimeout()` of 4ms). When finished, `<HouseView />` component is rendered.
 
 #### `<HouseView />`
 
-Receives data about the assigned house and housemates from `<CeremonyView />`'s state and displays a list of housemates (`<HousematesList />`). It also renders a `<GoBackButton />` that calls the `goBackToCeremony` function when clicked and `<SortingButton />` renders again instead of `<HouseView />`. In this component, a `getHouseColors` handler function sets colors for text and background according to the house selected. These colors are passed through props to every child component (`<HousematesList />`, `<HousemateCard />`, `<GoBackButton />`).
+Receives data about the assigned house and housemates from `<App />`'s state and displays a list of housemates (`<HousematesList />`). It also renders a `<GoBackButton />` that calls the `goBackToCeremony` function when clicked and `<CeremonyView />` renders again instead of `<HouseView />`. In this component, a `getHouseColors` handler function sets colors for text and background according to the house selected. These colors are passed through props to every child component (`<HousematesList />`, `<HousemateCard />`, `<GoBackButton />`).
 
 #### `<HousematesList />`
 
